@@ -5,9 +5,9 @@ signupform.addEventListener("submit", (event) => {
     event.preventDefault();
 
     // Obtener valores de los campos del formulario
-    const nameInput = document.querySelector('#name') 
-    const emailInput = document.querySelector('#email') 
-    const passwordInput = document.querySelector('#password') 
+    const nameInput = document.querySelector('#name');
+    const emailInput = document.querySelector('#email');
+    const passwordInput = document.querySelector('#password');
 
     // Obtener usuarios del almacenamiento local o establecer un array vacío si no hay usuarios
     const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -24,11 +24,11 @@ signupform.addEventListener("submit", (event) => {
         const nameValue = nameInput.value;
         const passwordValue = passwordInput.value;
 
-        users.push({name: nameValue, email: searchEmail, password: passwordValue});
+        users.push({ name: nameValue, email: searchEmail, password: passwordValue });
         localStorage.setItem('users', JSON.stringify(users));
         alert('Registro exitoso.');
     }
 
     // Redirigir a la página de inicio de sesión después de registrar un nuevo usuario
-    window.location.href= 'login.html';
-})
+    window.location.href = 'login.html';
+});

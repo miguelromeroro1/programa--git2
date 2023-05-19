@@ -20,9 +20,8 @@ loginform.addEventListener("submit", (event) => {
         return alert('Usuario y/o contraseña incorrectos!');
     }
 
-    // Si se encuentra un usuario válido, mostramos un mensaje de bienvenida y lo almacenamos en localStorage
-    alert(`Bienvenido ${validuser.name}!`);
-    localStorage.setItem('login_success', JSON.stringify(validuser))
+    // Si se encuentra un usuario válido, mostramos un mensaje de bienvenida
+    alert(`Bienvenido ${validuser.email}!`);
 
     // Redireccionamos al usuario a la página principal (index.html)
     window.location.href = 'index.html';
